@@ -1,0 +1,94 @@
+
+html {box-sizing: border-box;
+		font-size: 16px;	font-size: 62.5%;} /* 62.5% of 16 = 10 */
+
+*, *:before, *:after {box-sizing: border-box;}
+
+body {
+	max-width: 768px;
+	min-width: 300px;
+	margin: 0 auto;
+	font: 1.6rem/1.5 arial;
+	background-color: #F6F6F6;
+
+}
+
+/*--- Typograpgical Styles ---*/
+img {
+	width: 100%;
+	height: auto;
+}
+/*--- Authors Styles --- */
+p {
+	height: 200px;
+	background-color: #b5e7a0;
+	color: white;
+	padding: 2%;
+	border: 2px solid #999;
+	text-align: center;
+	line-height: 200px;
+}
+/*--- Custom Grids ---*/
+.row {
+	margin-bottom: 2%;
+}
+.row:before, 
+.row:after  {content: "";
+			 display: table;} /*clearfix bulit into row class*/
+.row:after { clear: both; }
+
+.col {
+	display: block;
+	float: left;
+	margin:0 2% 2% 0;
+}
+.col:last-child {
+	margin-right: 0;
+}
+
+.push {
+	position: relative;
+	left: 0%;
+}
+.pull {
+	position: relative;
+	left: 0%;
+}
+
+.one-of-three,
+.two-of-three,
+.three-of-three {
+	width: 97%;
+}
+
+@media screen and (min-width: 769px){
+	body {
+		max-width: 1920px;
+		min-width: 1024px;
+		margin: 0 12% 0 14%;
+	}
+	.two-of-three {
+		width: 64%;
+	}
+	.one-of-three {
+		width: 31%;
+	}
+	.push {
+		left: 66%;
+	}
+	.pull {
+		left: -33%;
+	}
+}
+
+/*--- Navigational behaviours --- */
+a {display: inline-block;
+	text-decoration: none;}
+
+a:link, a:visited {
+  color: #000;      /* unvisited link and a visted link */
+  }
+
+a:hover, a:active {
+  color: #fff;      /* mouse over  and selected link */
+  }
