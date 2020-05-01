@@ -1,137 +1,105 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge" >
-		<title>Fil's Pics</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="CSS/reset.css">
-		<link rel="stylesheet" href="CSS/grid-boilerplate.css">
-		<script src="JS/modernizr-custom.js"></script>
-	</head>
-	<style type="text/css">
-		
-html {box-sizing: border-box;
-		font-size: 16px;	font-size: 62.5%;} /* 62.5% of 16 = 10 */
-
-*, *:before, *:after {box-sizing: border-box;}
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
 
 body {
-	max-width: 768px;
-	min-width: 300px;
-	margin: 0 auto;
-	font: 1.6rem/1.5 arial;
-	background-color: #F6F6F6;
-
+  margin: 0;
+  font-family: Arial;
 }
 
-/*--- Typograpgical Styles ---*/
-img {
-	width: 100%;
-	height: auto;
+.header {
+  text-align: center;
+  padding: 32px;
 }
-/*--- Authors Styles --- */
-p {
-	height: 200px;
-	background-color: #b5e7a0;
-	color: white;
-	padding: 2%;
-	border: 2px solid #999;
-	text-align: center;
-	line-height: 200px;
-}
-/*--- Custom Grids ---*/
+
 .row {
-	margin-bottom: 2%;
-}
-.row:before, 
-.row:after  {content: "";
-			 display: table;} /*clearfix bulit into row class*/
-.row:after { clear: both; }
-
-.col {
-	display: block;
-	float: left;
-	margin:0 2% 2% 0;
-}
-.col:last-child {
-	margin-right: 0;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.push {
-	position: relative;
-	left: 0%;
-}
-.pull {
-	position: relative;
-	left: 0%;
-}
-
-.one-of-three,
-.two-of-three,
-.three-of-three {
-	width: 97%;
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-@media screen and (min-width: 769px){
-	body {
-		max-width: 1920px;
-		min-width: 1024px;
-		margin: 0 12% 0 14%;
-	}
-	.two-of-three {
-		width: 64%;
-	}
-	.one-of-three {
-		width: 31%;
-	}
-	.push {
-		left: 66%;
-	}
-	.pull {
-		left: -33%;
-	}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
-/*--- Navigational behaviours --- */
-a {display: inline-block;
-	text-decoration: none;}
-
-a:link, a:visited {
-  color: #000;      /* unvisited link and a visted link */
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
   }
-
-a:hover, a:active {
-  color: #fff;      /* mouse over  and selected link */
-  }
-
-h1 {
-	margin-top: 1000rem;	
 }
 
-	</style>
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
 
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
 
-	<body>
-		<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-		<header >
-			
-		</header>
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/falls2.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+    <img src="/w3images/ocean.jpg" style="width:100%">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/mountainskies.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/falls2.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+    <img src="/w3images/ocean.jpg" style="width:100%">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/mountainskies.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+  </div>
+</div>
 
-		<main class="row" >
-			<!-- <p class="col one-of-three push">One</p>
-			<p class="col two-of-three pull">Two</p>
-			<p class="col three-of-three">Three</p>	 -->
-
-			<h1>Coming Soon...</h1>			
-		</main>
-
-		<footer></footer>
-		
-		<!-- Javascript plugins -->
-		<script src="JS/jquery-3.3.1.min.js"></script>
-	</body>
-
+</body>
 </html>
